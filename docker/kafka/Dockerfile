@@ -1,6 +1,6 @@
 FROM php:7.1
 
-RUN apt-get update
+RUN apt-get update \
 && apt-get install -y librdkafka-dev git zip unzip wget 
 RUN pecl install rdkafka \
 && docker-php-ext-enable rdkafka
